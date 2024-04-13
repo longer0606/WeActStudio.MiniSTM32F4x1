@@ -1,117 +1,50 @@
-# STM32F4x1 MiniF4 / WeAct Studio 微行工作室 出品
+很多开发者对于STM32开发板还都不了解，具体哪一款好用？怎么选择？让很多工程师感到困惑，今天就给大家介绍一款DFRobot商城新品，适合有经验的STM32玩家使用的一款开发板-STM32F411开发板 。
 
-* [中文版本](./README-zh.md)
+pYYBAGDxJ36AdOpxAAWtv-gYjVA382.png
 
-> `STM32F401CCU6` / `STM32F401CEU6` / `STM32F411CEU6` Core Board
+dfrobot商城STM32开发板
 
-!["STM32F411 Immersion Gold Board 3D View"](./images/STM32F4x1-V22-3D.jpg )
+STM32F411开发板功能介绍
 
-## Where to buy
+这是一款体积非常小巧的STM32F411开发板，它能很好的嵌入项目中。开发板的主控芯片采用STM32F411CEU6，具有512KB的ROM，128 KB的SRAM，以及连接到两个 APB 总线、两个 AHB 总线和一个 32 位总线的各种增强型 I/O 和外设多 AHB 总线矩阵。并以100 MHz的工作频率运行。背部预留有焊接SPI闪存芯片的位置，可以增加更多的空间用来记录数据或储存文件。
 
-1. TaoBao [WeAct Studio official store](https://shop118454188.taobao.com/index.htm?spm=2013.1.w5002-17867322799.2.212f5cb16nqwNP)
-2. AliExpress [WeAct Studio Official Store](https://weactstudio.aliexpress.com/store/1101545918)
 
-> None of the boards received without Logo `WeAct Studio` && `version number` are produced by us. If there are any quality problems or technical problems, please find the seller to solve them by yourself. It is best to report them and comment on them, so as not to deceive others!!
 
-!["Description of Logo and version number"](./images/STM32F4x1C_Logo&Version.png)
+STM32F411开发板上有一个Type-C接口和3.3V 100mA的LDO稳压器，同时串联了二极管防止电源回流。采用25Mhz 9pF高速晶振和32.768Khz 6pF低速晶振。
 
-We do not produce the boards that we received without the Logo `WeAct Studio` && `version number`.
+poYBAGDxJ5KAVYGgAAWN_IxME-0813.png
 
-## Our Boards
+DFRobot商城STM32F411开发板
 
-* 411 adopts lead-free gold-sinking process, 401 adopts lead-free process, and the needles are gold-plated. All materials conform to ROHS standard, and lead is harmful to health, while piracy USES lead for profit
+这些特性使STM32F411开发板适用于广泛的应用，但适用于有STM32开发经验的高级用户。
 
-* All use the latest batch of chips to give customers the best product experience
 
-* 25MHZ high speed crystal vibration & 32.768khz low speed crystal vibration adopt high quality metal shell crystal vibration, the starting effect is better
 
-* Flash disk is reserved to meet the needs of big data storage and microPython. USBDisk&&FATFFS routine is provided
+STM32F411开发板优势：
 
-* Support for MicroPython programming with available MicroPython firmware
+STM32F411CEU6 100Mhz, 128KB RAM, 512KB ROM
 
-* Support for Arduino programming, see details[Github](https://github.com/stm32duino/Arduino_Core_STM32)
+25MHZ 高速晶振 & 32.768Khz 6PF低速晶振
 
-* Version V3.1, there are three keys, reset key, BOOT0 key, user key
+采用沉金工艺，使用无铅工艺，排针为镀金排针，更环保
 
-!["Chip batch introduction"](./images/STM32F4x1_chip_display.png)
+已预留Flash焊盘，提供USBDisk&&FATFFS例程
 
-> We are committed to always use the best raw material, using the latest chips, users get the best user experience, improve the efficiency of development.
+支持MicroPython编程，提供可用的MicroPython固件
 
-## Our Board Packaging
+支持Arduino编程
 
-![""](./images/STM32F4x1_pack.png)
+支持C语言编程开发
 
-## The parameters of the board chip we produced are compared
+版本为V3.0，有3个按钮，复位键，BOOT0键，用户按键
 
-||STM32F401CCU6|STM32F401CEU6|STM32F411CEU6|
-|:--:|:--:|:--:|:--:|
-|Freq.|84Mhz|84Mhz|100Mhz|
-|ROM|256KB|512KB|512KB|
-|RAM|64KB|96KB|128KB|
-|Sale situation|**discontinued**|**discontinued**|In the sale|
+提供CMSIS-DAP固件，秒变下载烧录器
 
-## Pin distribution diagram
+使用最新原装ST芯片，高质量晶振
 
-> Thanks, `Richard·Balint` !! 
+STM32F411开发板引脚定义：
 
-With the pin allocation diagram, it's easier to work with MicroPython and Arduino!
+poYBAGDxJ6eAdAKxAAsIJVccx5U431.png
 
-![ "/General document/STM32F4x1 v2.0+ Pin Layout"](./images/STM32F4x1_PinoutDiagram_RichardBalint.png)
-
-## MicroPython
-
-* version: V1.12-35
-
-> STM32F401CEU6 `Supported`  
-STM32F411CEU6 `Supported`.
-
-### Board Definition
-
-STM32F401CE: `/SDK/STM32F401CEU6/MicroPython/WeAct_F411CE`  
-STM32F411CE: `/SDK/STM32F411CEU6/MicroPython/WeAct_F411CE`  
-
-## HID Flash
-
-> supported in `English` and `Chinese`
-
-### Enter the HID bootloader method:
-
-1. Hold down the \<KEY\>, power on or reset again, and the C13 LED will blink to release
-2. APP enters the bootloader reference stm32f401_test_APP 0x8004000.zip project
-3. [More instructions](./Soft/WeAct_HID_FW_Bootloader/README.md)
-
-![WeAct HID Flash](images/HIDFlash2.png)
-
-## How to enter ISP mode
-
-* Method 1: When the power is on, press the BOOT0 key and the reset key, then release the reset key, and release the BOOT0 key after 0.5 seconds
-* Method 2: When the power is off, hold down the BOOT0 key, and release the BOOT0 at 0.5s after the power is on
-* DFU Mode: Use the data line to connect to the computer. If there is an unrecognized problem, you can heat the chip appropriately (25°C) and then re-enter the ISP mode
-* Serial Port Mode: Connect PA9 and PA10 of core board with USB serial port
-* Soft: STM32CubeProg。
-
-## Chip information
-
-|MCU|Freq.|RAM|ROM|
-|:--:|:--:|:--:|:--:|
-|STM32F401CC|84Mhz|64KB|256KB|
-|STM32F401CE|84Mhz|96KB|512KB|
-|STM32F411CE|100Mhz|128KB|512KB|
-
-![STM32F411 Info](./images/DeviceMarkingUFQFPN48.png)
-
-| STM32F411CE |STM32F401CC|STM32F401CE|
-| :--: | :--: | :--: |
-|![STM32F411 Info](./images/stm32f411_dinfo.png)|![STM32F401CC Info](./images/stm32f401cc_dinfo.png)|![STM32F401CE Info](./images/stm32f401ce_dinfo.png)|
-|Date Code|Date Code|Date Code|
-|014 (2020.06)|End Of Life|934&935 (2020.06)|
-|947&002 (2020.03)|609&608|
-|946&947 (2020.01)|723 (2020.01)|
-|19+ (2019)|16+ (2019)|
-
-### All chips are functional and original
-
-## Board Shape
-
-![STM32F4X1 V2.0+](./images/STM32F4x1-V20+BoardShape.png "Board Shape")
+STM32F411开发板引脚定义
 
