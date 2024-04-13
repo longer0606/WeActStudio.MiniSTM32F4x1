@@ -1,6 +1,7 @@
 很多开发者对于STM32开发板还都不了解，具体哪一款好用？怎么选择？让很多工程师感到困惑，今天就给大家介绍一款DFRobot商城新品，适合有经验的STM32玩家使用的一款开发板-STM32F411开发板 。
 
 pYYBAGDxJ36AdOpxAAWtv-gYjVA382.png
+http://6.eewimg.cn/news/uploadfile/2023/0620/20230620035356350.png
 
 dfrobot商城STM32开发板
 
